@@ -4,7 +4,7 @@ import java.util.Observable;
 
 public class Voiture extends Observable {
 
-	public static int largeurDomaineEnMetres;
+	public static int largeurDomaineEnMetres = 1000;
 
 	private int x;
 	private int y;
