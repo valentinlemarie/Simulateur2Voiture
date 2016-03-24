@@ -48,12 +48,12 @@ public class IHMVoiture extends JFrame implements Observer{
 		return (int) (paramatreConversionMetresPixels * xMetres);	
 	}
 
-	@Override
+
 	public void update(Observable arg0, Object arg1) {
 		this.repaint();
 	}
 
-	@Override
+
 	public void paint(Graphics contexteGraphique) {
 		super.paint(contexteGraphique);
 		contexteGraphique.setColor(Color.red);
