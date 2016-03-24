@@ -105,13 +105,7 @@ public class Voiture extends Observable {
 		
 	}
 
-	public void tournerAgauche()
-	{
-	}
 
-	public void tournerADroite()
-	{
-	}
 
 	public int getCoordXEnMetres()
 	{
