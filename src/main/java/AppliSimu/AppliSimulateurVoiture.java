@@ -11,7 +11,7 @@ public class AppliSimulateurVoiture {
     public static final int dureeUneSecondeEnMilliSecondes = 1000;
 
     public static void main(String[] args) {
-		final Voiture voiture = new Voiture(100, 100, 200);
+		final Voiture voiture = new Voiture(100, 100, 0);
 		IhmSimu ihmSimu = new IhmSimu(voiture);
 
 		VueVoiture cercle = new VueVoiture(voiture, ihmSimu);
