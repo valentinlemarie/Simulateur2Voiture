@@ -53,7 +53,7 @@ public class Voiture extends Observable {
 		this.notifyObservers();
 	}
 
-	public int getX() {
+	public int getCoordXEnMetres() {
 		return x;
 	}
 
@@ -91,7 +91,7 @@ public class Voiture extends Observable {
 		directionEnDegres = (directionEnDegres) % 360;
 	}
 
-	public int getY() {
+	public int getCoordYEnMetres() {
 		return y;
 	}
 
@@ -102,7 +102,8 @@ public class Voiture extends Observable {
 
 	public void freiner()
 	{
-		
+		if (vitesseMetreSeconde >0)
+			vitesseMetreSeconde -= 10;
 	}
 
 	public void tournerAgauche()
@@ -113,13 +114,5 @@ public class Voiture extends Observable {
 	{
 	}
 
-	public int getCoordXEnMetres()
-	{
-		return 0;
-	}
 
-	public int getCoordYEnMetres()
-	{
-		return 0;
-	}
 }
