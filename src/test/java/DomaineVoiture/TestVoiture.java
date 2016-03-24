@@ -12,7 +12,7 @@ public class TestVoiture {
 	
 	@Before
 	public void setUp(){
-		maVoiture = new Voiture (100, 0, 10);
+		maVoiture = new Voiture (100, 100, 10);
 	}
 	
 	@Test
@@ -20,7 +20,7 @@ public class TestVoiture {
 		
 		maVoiture.miseAJourPosition();
 		
-		assertEquals(110, maVoiture.getX());
+		assertEquals(110, maVoiture.getCoordXEnMetres());
 	}
 	
 	@Test
@@ -55,7 +55,7 @@ public class TestVoiture {
 		maVoiture.setDirection(0);
 		maVoiture.inverserDirection();
 		maVoiture.miseAJourPosition();
-		assertEquals(90, maVoiture.getX());
+		assertEquals(90, maVoiture.getCoordXEnMetres());
 		
 	}
 	
@@ -64,7 +64,7 @@ public class TestVoiture {
 		
 		maVoiture.setVitesse(1000);
 		maVoiture.miseAJourPosition();
-		assertEquals(1000, maVoiture.getX());
+		assertEquals(1000, maVoiture.getCoordXEnMetres());
 		
 	}
 	
@@ -74,7 +74,7 @@ public class TestVoiture {
 		maVoiture.setVitesse(1000);
 		maVoiture.inverserDirection();
 		maVoiture.miseAJourPosition();
-		assertEquals(0, maVoiture.getX());
+		assertEquals(0, maVoiture.getCoordXEnMetres());
 		
 	}
 	
