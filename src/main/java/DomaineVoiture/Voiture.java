@@ -107,6 +107,8 @@ public class Voiture extends Observable {
 	}
 
 
+	public void avancerEnFonctionDeLaVitesseEtAngle(double dureeTimerEnSeconde)
+	{
 
-
+	}
 }
