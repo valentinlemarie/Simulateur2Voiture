@@ -128,7 +128,7 @@ public class IhmSimu extends JFrame {
         boutonTournerAgauche.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent arg0) {
-                voiture.tournerAgauche();
+                voiture.tournerGauche();
             }
         });
 
@@ -136,7 +136,7 @@ public class IhmSimu extends JFrame {
 
 
             public void actionPerformed(ActionEvent arg0) {
-                voiture.tournerADroite();
+                voiture.tournerDroite();
             }
         });
 

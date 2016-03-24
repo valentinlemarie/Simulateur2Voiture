@@ -106,13 +106,7 @@ public class Voiture extends Observable {
 			vitesseMetreSeconde -= 10;
 	}
 
-	public void tournerAgauche()
-	{
-	}
 
-	public void tournerADroite()
-	{
-	}
 
 
 }
