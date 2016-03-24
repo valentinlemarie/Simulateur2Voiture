@@ -86,7 +86,7 @@ public class Voiture extends Observable {
 	}
 
 
-	public void tournerDroite() {
+	public void tournerGauche() {
 		directionEnDegres +=90 ;
 		directionEnDegres = (directionEnDegres) % 360;
 	}
@@ -95,7 +95,7 @@ public class Voiture extends Observable {
 		return y;
 	}
 
-	public void tournerGauche() {
+	public void tournerDroite() {
 		directionEnDegres +=270 ;
 		directionEnDegres = (directionEnDegres) % 360;
 	}
