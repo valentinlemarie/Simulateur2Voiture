@@ -4,6 +4,8 @@ import java.util.Observable;
 
 public class Voiture extends Observable {
 
+	public static int largeurDomaineEnMetres;
+
 	private int x;
 	private int y;
 	private int vitesseMetreSeconde;
@@ -96,5 +98,28 @@ public class Voiture extends Observable {
 	public void tournerGauche() {
 		directionEnDegres +=270 ;
 		directionEnDegres = (directionEnDegres) % 360;
+	}
+
+	public void freiner()
+	{
+		
+	}
+
+	public void tournerAgauche()
+	{
+	}
+
+	public void tournerADroite()
+	{
+	}
+
+	public int getCoordXEnMetres()
+	{
+		return 0;
+	}
+
+	public int getCoordYEnMetres()
+	{
+		return 0;
 	}
 }
