@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 
 public class AppliSimulateurVoiture {
 
-    public static final int dureeUneSecondeEnMilliSecondes = 1000;
+    public static final int DUREE_UNE_SECONDE_EN_MILLISECONDES = 1000;
 
     public static void main(String[] args) {
 		final Voiture voiture = new Voiture(100, 100, 0);
@@ -20,8 +20,8 @@ public class AppliSimulateurVoiture {
 
 		//DetectionCollision detectionCollision = new DetectionCollision(voiture, obstacle);
 
-		final double dureeTimerEnSeconde = dureeUneSecondeEnMilliSecondes / 1000.0;
-		Timer timerAvancer = new Timer(dureeUneSecondeEnMilliSecondes,
+		final double dureeTimerEnSeconde = DUREE_UNE_SECONDE_EN_MILLISECONDES / 1000.0;
+		Timer timerAvancer = new Timer(DUREE_UNE_SECONDE_EN_MILLISECONDES,
                 new ActionListener()
                 {
                     public void actionPerformed(ActionEvent arg0) {

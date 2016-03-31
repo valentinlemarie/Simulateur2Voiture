@@ -14,28 +14,18 @@ import DomaineVoiture.Voiture;
 
 public class IhmSimu extends JFrame {
 
-    public static final int TailleFenetreEnPixels = 500;
+    public static final int TAILLE_FENETRE_EN_PIXELS = 500;
 
     private int xPixelVoiture;
     private int yPixelVoiture;
 
-
-    private int xObstacle;
-
-    private int yObstacle;
-
-    private int largeurObstacle;
-
-    private int hauteurObstacle;
-
     JPanel panel;
-
     Voiture voiture;
 
     public IhmSimu(Voiture voiture) {
         super();
         this.setTitle("Simulateur de Voiture");
-        this.setSize(TailleFenetreEnPixels, TailleFenetreEnPixels);
+        this.setSize(TAILLE_FENETRE_EN_PIXELS, TAILLE_FENETRE_EN_PIXELS);
         this.voiture = voiture;
         dessinerBoutons();
         this.xPixelVoiture = 0;
@@ -49,15 +39,15 @@ public class IhmSimu extends JFrame {
     public void paint(Graphics contexteGraphique) {
         super.paint(contexteGraphique);
         dessinerVoiture(this.xPixelVoiture, this.yPixelVoiture, contexteGraphique);
-        dessinerObstacle(contexteGraphique);
+        //dessinerObstacle(contexteGraphique);
         dessinerRoute(contexteGraphique);
     }
 
-    private void dessinerObstacle(Graphics graphics) {
+    /*private void dessinerObstacle(Graphics graphics) {
         graphics.setColor(Color.blue);
         graphics.fillRect(xObstacle, yObstacle, largeurObstacle,
                 hauteurObstacle);
-    }
+    }*/
 
     public void dessinerRoute(Graphics graphics) {
         graphics.setColor(Color.green);
