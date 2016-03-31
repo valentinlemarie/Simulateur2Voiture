@@ -31,10 +31,10 @@ public class VueVoiture implements Observer {
 
     public void update(Observable observable, Object arg1) {
         TransformationMetreEnPixel transfo = new TransformationMetreEnPixel();
-        int xVoiture = this.voiture.getCoordXEnMetres();
-        int yVoiture = this.voiture.getCoordYEnMetres();
-        int xPixelVoiture = transfo.transformerXMetresPixels(xVoiture);
-        int yPixelVoiture = transfo.transformerYMetresPixels(yVoiture);
+        int xMetreVoiture = this.voiture.getCoordXEnMetres();
+        int yMetreVoiture = this.voiture.getCoordYEnMetres();
+        int xPixelVoiture = transfo.transformerXMetresPixels(xMetreVoiture);
+        int yPixelVoiture = transfo.transformerYMetresPixels(yMetreVoiture);
         ihmSimu.setXPixelVoiture(xPixelVoiture);
         ihmSimu.setYPixelVoiture(yPixelVoiture);
         ihmSimu.repaint();

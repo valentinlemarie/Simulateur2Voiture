@@ -6,14 +6,14 @@ public class Voiture extends Observable {
 
 	public static int largeurDomaineEnMetres = 1000;
 
-	private int x;
-	private int y;
+	private int xEnMetres;
+	private int yEnMetres;
 	private int vitesseMetreSeconde;
 	private int directionEnDegres;
 
-	public Voiture(int x, int y, int vitesse) {
-		this.x = x;
-		this.y = y;
+	public Voiture(int xEnMetres, int yEnMetres, int vitesse) {
+		this.xEnMetres = xEnMetres;
+		this.yEnMetres = yEnMetres;
 		this.vitesseMetreSeconde = vitesse;
 		this.directionEnDegres = 0;
 	}
@@ -26,26 +26,26 @@ public class Voiture extends Observable {
 
 	private void miseAJourPositionX() {
 		if (directionEnDegres == 0)
-			x += vitesseMetreSeconde;
+			xEnMetres += vitesseMetreSeconde;
 		else if (directionEnDegres == 180)
-			x -= vitesseMetreSeconde;
+			xEnMetres -= vitesseMetreSeconde;
 
-		if (x > 1000)
-			x = 1000;
-		else if (x < 0)
-			x = 0;
+		if (xEnMetres > 1000)
+			xEnMetres = 1000;
+		else if (xEnMetres < 0)
+			xEnMetres = 0;
 	}
 
 	private void miseAJourPositionY() {
 		if (directionEnDegres == 90)
-			y += vitesseMetreSeconde;
+			yEnMetres += vitesseMetreSeconde;
 		else if (directionEnDegres == 270)
-			y -= vitesseMetreSeconde;
+			yEnMetres -= vitesseMetreSeconde;
 
-		if (y > 500)
-			y = 500;
-		else if (y < -500)
-			y = -500;
+		if (yEnMetres > 500)
+			yEnMetres = 500;
+		else if (yEnMetres < -500)
+			yEnMetres = -500;
 	}
 
 	private void notificationObservateur() {
@@ -54,7 +54,7 @@ public class Voiture extends Observable {
 	}
 
 	public int getCoordXEnMetres() {
-		return x;
+		return xEnMetres;
 	}
 
 	public void accelerer() {
@@ -92,7 +92,7 @@ public class Voiture extends Observable {
 	}
 
 	public int getCoordYEnMetres() {
-		return y;
+		return yEnMetres;
 	}
 
 	public void tournerDroite() {
